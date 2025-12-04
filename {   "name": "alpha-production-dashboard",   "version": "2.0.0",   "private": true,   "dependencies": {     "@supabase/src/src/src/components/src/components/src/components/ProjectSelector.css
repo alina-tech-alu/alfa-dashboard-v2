@@ -1,0 +1,56 @@
+.project-selector {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.selector-label {
+  font-size: 14px;
+  font-weight: 500;
+  white-space: nowrap;
+}
+
+.selector-dropdown {
+  background: rgba(255, 255, 255, 0.2);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  color: white;
+  padding: 10px 16px;
+  border-radius: 8px;
+  font-size: 15px;
+  cursor: pointer;
+  min-width: 250px;
+  transition: all 0.2s;
+}
+
+.selector-dropdown:hover {
+  background: rgba(255, 255, 255, 0.3);
+}
+
+.selector-dropdown:focus {
+  outline: none;
+  border-color: rgba(255, 255, 255, 0.5);
+  box-shadow: 0 0 0 3px rgba(255, 255, 255, 0.1);
+}
+
+.selector-dropdown:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.selector-dropdown option {
+  background: #1e293b;
+  color: white;
+  padding: 8px;
+}
+
+@media (max-width: 768px) {
+  .project-selector {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 8px;
+  }
+
+  .selector-dropdown {
+    min-width: 100%;
+  }
+}
